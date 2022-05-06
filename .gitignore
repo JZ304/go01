@@ -32,7 +32,7 @@ _cgo_export.*
 *.7z
 *.dmg
 *.gz
-*.iso
+*.i
 *.jar
 *.rar
 *.tar

@@ -1,7 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("go 2666")
+
+	// r := gin.Default()
+
+	// r.GET("/", func(c *gin.Context) {
+	// 	c.JSON(http.StatusOK, gin.H{
+	// 		"Hello": "World!",
+	// 	})
+	// })
+
+	// r.run()
+
+	fmt.Println("Helloo!!!222")
 }
