@@ -4,9 +4,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/jz304/gohub/routes"
-
 	"github.com/gin-gonic/gin"
+	"github.com/jz304/gohub/routes"
 )
 
 func SetupRoute(router *gin.Engine) {

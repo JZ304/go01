@@ -1,24 +1,31 @@
-package cofig
+// Package config 站点配置信息
+package config
 
-import "gohub/pkg/config"
+import "github.com/jz304/gohub/pkg/config"
 
 func init() {
 	config.Add("app", func() map[string]interface{} {
 		return map[string]interface{}{
 
-			// 名称
+			// 应用名称
 			"name": config.Env("APP_NAME", "Gohub"),
-			// 环境
+
+			// 当前环境，用以区分多环境，一般为 local, stage, production, test
 			"env": config.Env("APP_ENV", "production"),
-			// 调试
+
+			// 是否进入调试模式
 			"debug": config.Env("APP_DEBUG", false),
-			// port
+
+			// 应用服务端口
 			"port": config.Env("APP_PORT", "3000"),
-			// 加密会话，JWT
+
+			// 加密会话、JWT 加密
 			"key": config.Env("APP_KEY", "33446a9dcf9ea060a0a6532b166da32f304af0de"),
-			// url
+
+			// 用以生成链接
 			"url": config.Env("APP_URL", "http://localhost:3000"),
-			// 时区
+
+			// 设置时区，JWT 里会使用，日志记录里也会使用到
 			"timezone": config.Env("TIMEZONE", "Asia/Shanghai"),
 		}
 	})
